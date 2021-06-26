@@ -3,8 +3,6 @@ import React from "react";
 /* eslint-disable jsx-a11y/iframe-has-title, jsx-a11y/alt-text,  */
 /* eslint-disable no-unused-vars */
 
-import { useState } from "react";
-
 import {
   AnimateSVG,
   Morph,
@@ -16,32 +14,35 @@ import {
   timeline,
   range,
   themes,
+  MObject,
 } from "immersion-presentation";
+
+import { useState } from "react";
 
 import "immersion-presentation/dist/index.css";
 import step from "immersion-presentation/dist/step.macro.js";
+import "immersion-presentation/dist/show.macro.js";
+
 
 const {
-  Presentation,
   Slide,
+  Presentation,
   BibliographySlide,
-  TitleSlide,
-  TableOfContentsSlide,
-  SectionSlide,
+  OverviewSlide,
   QuestionSlide,
-  ConclusionSlide,
   Figure,
   List,
   Item,
   Cite,
-  Box,
   Qed,
-} = themes.modern;
+} = themes.principiae;
 
 function App() {
   return (
     <Presentation>
-      <Slide steps={[1, 2, 3]}>The step is {step}!</Slide>
+      <Slide header="Title of the slide" steps={[1, 2, 3]}>
+        The step is {step}!
+      </Slide>
     </Presentation>
   );
 }

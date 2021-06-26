@@ -1,5 +1,5 @@
 # Presentation
 
-> Made with immersion
+> Made with Immersion
 
 TODO: explain directory structure
